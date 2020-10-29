@@ -1,22 +1,33 @@
 const connection = require("./connection.js");
 
-class ORM {
-    constructor(connection) {
-        this.connection = connection;
-    }
+const orm = {
 
-    selectAll() {
+    selectAll: function (tableInput) {
+        const queryString = "SELECT * FROM ??";
+        connection.query(queryString, [tableInput], function (err, result) {
+            if (err) throw err;
+            console.table(result);
+            return result
+        });
+    },
 
-    }
+    insertOne: function (tableInput, columnName, inputValue) {
+        const queryString = "INSERT INTO ?? (??) VALUES ??";
+        connection.query(queryString, [tableInput, columnName, inputValue], function (err, result) {
+            if (err) throw err;
+            console.table(result);
+            return result
+        });
+    },
 
-    insertOne() {
+    updateOne: function (tableInput, columnName, inputValue, idColumnName, inputIdValue) {
+        const queryString = "UPDATE ?? SET ?? = ?? WHERE ?? = ??";
+        connection.query(queryString, [tableInput, columnName, inputValue, idColumnName, inputIdValue], function (err, result) {
+            if (err) throw err;
+            console.table(result);
+            return result
+        });
+    };
+};
 
-    }
-
-    updateOne() {
-
-    }
-
-}
-
-module.exports = new ORM(connection);
+module.exports = orm; 
