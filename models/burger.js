@@ -24,4 +24,6 @@ const burger = {
 
 module.export = burger;
 
-burger.selectAll();
+// burger.selectAll()
+// console.log(burger.selectAll);
+// console.log("TEST");

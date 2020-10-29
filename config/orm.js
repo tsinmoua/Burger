@@ -6,7 +6,7 @@ const orm = {
         const queryString = "SELECT * FROM ??";
         connection.query(queryString, [tableInput], function (err, result) {
             if (err) throw err;
-            console.table(result);
+            // console.table(result);
             cb(result)
         });
     },
@@ -16,7 +16,7 @@ const orm = {
         connection.query(queryString, [tableInput, columnName, inputValue], function (err, result) {
             if (err) throw err;
             console.log(result);
-            cb(result)
+            // cb(result)
         });
     },
 
@@ -25,7 +25,7 @@ const orm = {
         connection.query(queryString, [tableInput, columnName, inputValue, inputIdValue], function (err, result) {
             if (err) throw err;
             console.table(result);
-            cb(result)
+            // cb(result)
         });
     }
 };
