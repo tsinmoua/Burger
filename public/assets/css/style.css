@@ -1,3 +1,17 @@
 h1 {
-    color: red
+    color: red;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(235, 181, 4);
+}
+
+.burgerPic {
+    width: 300px;
+}
+
+.addABurger {
+    margin: auto;
+    text-align: center;
 }

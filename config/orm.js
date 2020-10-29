@@ -15,8 +15,8 @@ const orm = {
         const queryString = "INSERT INTO ?? (??) VALUES (?)";
         connection.query(queryString, [tableInput, columnName, inputValue], function (err, result) {
             if (err) throw err;
-            console.log(result);
-            // cb(result)
+            // console.log(result);
+            cb(result)
         });
     },
 
@@ -24,8 +24,8 @@ const orm = {
         const queryString = "UPDATE ?? SET ?? = ? WHERE id = ?";
         connection.query(queryString, [tableInput, columnName, inputValue, inputIdValue], function (err, result) {
             if (err) throw err;
-            console.table(result);
-            // cb(result)
+            // console.table(result);
+            cb(result)
         });
     }
 };
