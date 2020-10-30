@@ -9,9 +9,22 @@ body {
 
 .burgerPic {
     width: 300px;
+    margin: auto;
 }
 
 .addABurger {
     margin: auto;
     text-align: center;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .devourButton {
+      width: 50px;
+      height: 50px;
+  }

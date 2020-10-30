@@ -2,6 +2,7 @@ const mysql = require("mysql");
 
 const connection = mysql.createConnection({
     host: "localhost",
+    port: 3306,
     user: "root",
     password: "root",
     database: "burgers_db"
@@ -9,7 +10,7 @@ const connection = mysql.createConnection({
 
 connection.connect(function (err) {
     if (err) throw err;
-    console.log('\x1b[42m%s\x1b[0m', "\n Connected as ID: " + connection.threadId + "\n");
+    console.log("Connected as ID: " + connection.threadId);
 });
 
 module.exports = connection;

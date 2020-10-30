@@ -8,9 +8,13 @@
                 {{#each burgers}}
                 {{#unless devoured}}
                 <li> {{ burger_name }}
-                    <button class="devour" data-id="{{id}}" data-newStatus="{{devoured}}">
-                        {{#if devoured}}""{{else}}DEVOUR!{{/if}}
-                    </button>
+                    <input type="image"
+                        src="http://clipart-library.com/img1/1241371.png" 
+                        alt="Hamburger" 
+                        class="devour devourButton"
+                        data-id="{{id}}" 
+                        data-newStatus="{{devoured}}"
+                        {{#if devoured}}""{{else}}DEVOUR!{{/if}}/>DEVOUR IT!
                 </li>
                 {{/unless}}
                 {{/each}}
@@ -19,8 +23,9 @@
 
         <div class="col-sm">
             <img src="https://lh3.googleusercontent.com/proxy/5_1GQ70ERu7_chHn1ZuaH-TKXxU_8WGkVKme8oI3MIcbikOpK8By19xAgVrve8_en1xLnBrId-wZ2Dv0-DTPM-8aqw"
-                alt="Burger" class="burgerPic">
+                alt="Burger" class="burgerPic center">
         </div>
+        
 
         <div class="col-sm">
             <h2>Yum, these were delicious!</h2>

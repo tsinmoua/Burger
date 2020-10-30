@@ -31,9 +31,3 @@ const orm = {
 };
 
 module.exports = orm; 
-
-// orm.selectAll("burgers");
-// orm.insertOne("burgers", ["burger_name", "devoured"], ["test3", true]);
-// orm.selectAll("burgers");
-// orm.updateOne("burgers", "burger_name", "BLT + Cheeseburger", "1");
-// orm.selectAll("burgers");
